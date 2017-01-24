@@ -15,15 +15,15 @@ SPFP (Single Point Precision Floating Fix) for Arma 3 (Optimized for AL)
 
 ### How use it:
 - SUM: <b>life_fnc_stringAdd</b>:</br>
-&nbsp;&nbsp;```["1","1"] call life_fnc_stringAdd;``` -- RESULT: "2"
+&nbsp;&nbsp;```["1","1"] call life_fnc_stringAdd;``` -- RESULT: "2"</br>
 </br>
 - Subtraction: <b>life_fnc_stringSub</b>:</br>
-&nbsp;&nbsp;```["1","1"] call life_fnc_stringSub;``` -- RESULT: "0"
+&nbsp;&nbsp;```["1","1"] call life_fnc_stringSub;``` -- RESULT: "0"</br>
 </br>
 - Comparison: <b>life_fnc_stringCompare</b>:</br>
-&nbsp;&nbsp;```["1","1"] call life_fnc_stringCompare;``` -- RESULT: "="
-&nbsp;&nbsp;```["2","1"] call life_fnc_stringCompare;``` -- RESULT: ">"
-&nbsp;&nbsp;```["1","2"] call life_fnc_stringCompare;``` -- RESULT: "<"
+&nbsp;&nbsp;```["1","1"] call life_fnc_stringCompare;``` -- RESULT: "="</br>
+&nbsp;&nbsp;```["2","1"] call life_fnc_stringCompare;``` -- RESULT: ">"</br>
+&nbsp;&nbsp;```["1","2"] call life_fnc_stringCompare;``` -- RESULT: "<"</br>
 </br>
 
 ### Current issues:
