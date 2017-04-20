@@ -3,11 +3,11 @@
     Author: Daniel Stuart
 
     Description:
-    Using integers we can only go up to 7 digits without loosing precision.
+    Using integers we can only go up to 6 digits without loosing precision.
     This script converts strings to arrays or arrays to strings.
 
     TODO:
-    Support negative numbers: Ex: "-1" (Not major for AltisLife currency)
+    Support negative numbers: Ex: "-1" (Not a major issue for AltisLife currency)
 
     Parameter(s):
         0: STRING || ARRAY - Will convert one to the other.
