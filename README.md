@@ -14,17 +14,17 @@ SPFP (Single-Precision Floating-Point) Fix for Arma 3 (AltisLife)
 </br>
 
 ### How use it:
-- SUM: <b>life_fnc_stringAdd</b>:</br>
-&nbsp;&nbsp;```["1","1"] call life_fnc_stringAdd;``` -- RESULT: "2"</br>
+- SUM: <b>math_fnc_stringSum</b>:</br>
+&nbsp;&nbsp;```["1","1"] call math_fnc_stringSum;``` -- RESULT: "2"</br>
 
-- Subtraction: <b>life_fnc_stringSub</b>:</br>
-&nbsp;&nbsp;```["1","1"] call life_fnc_stringSub;``` -- RESULT: "0"</br>
+- Subtraction: <b>math_fnc_stringSub</b>:</br>
+&nbsp;&nbsp;```["1","1"] call math_fnc_stringSub;``` -- RESULT: "0"</br>
 
-- Comparison: <b>life_fnc_stringCompare</b>:</br>
-&nbsp;&nbsp;```["1","1"] call life_fnc_stringCompare;``` -- RESULT: "="</br>
-&nbsp;&nbsp;```["2","1"] call life_fnc_stringCompare;``` -- RESULT: ">"</br>
-&nbsp;&nbsp;```["1","2"] call life_fnc_stringCompare;``` -- RESULT: "<"</br>
+- Comparison: <b>math_fnc_stringCompare</b>:</br>
+&nbsp;&nbsp;```["1","1"] call math_fnc_stringCompare;``` -- RESULT: "="</br>
+&nbsp;&nbsp;```["2","1"] call math_fnc_stringCompare;``` -- RESULT: ">"</br>
+&nbsp;&nbsp;```["1","2"] call math_fnc_stringCompare;``` -- RESULT: "<"</br>
 
 ### Current issues:
 - <b>Any function</b>: Negative number input isn't supported. (Ex: "-1")  (Not a major issue for AltisLife currency)
-- <b>life_fnc_stringSub</b>: Negative results aren't supported. (Ex: "1" - "2")  (Not a major issue for AltisLife currency)
+- <b>math_fnc_stringSub</b>: Negative results aren't supported. (Ex: "1" - "2")  (Not a major issue for AltisLife currency)

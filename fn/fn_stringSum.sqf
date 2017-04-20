@@ -1,5 +1,5 @@
 /*
-    File: fn_stringAdd.sqf (Part of SPFP-Fix library)
+    File: fn_stringSum.sqf (Part of SPFP-Fix library)
     Author: Daniel Stuart
 
     Description:

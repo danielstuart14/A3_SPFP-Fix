@@ -1,12 +1,13 @@
 class CfgFunctions {
-    class Functions_Test {
-        tag = "life";
-        class Test {
+    class Functions_Math {
+        tag = "math";
+        class Math {
             file = "fn";
-            class stringAdd;
+
             class stringArray;
             class stringCompare;
             class stringSub;
+            class stringSum;
         };
     };
 };
