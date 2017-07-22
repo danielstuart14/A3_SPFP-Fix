@@ -38,12 +38,12 @@ if (_value1 isEqualTo _value2) then {
             _return = "<";
         };
     } else {
-        _value1 = [_value1] call life_fnc_stringArray;
-        _value2 = [_value2] call life_fnc_stringArray;
+        _value1 = _value1 splitString "";
+        _value2 = _value2 splitString "";
 
         _return = "<";
         for "_i" from 0 to (count(_value1) - 1) step 1 do {
-            if ((_value1 select _i) > (_value2 select _i)) exitWith {
+            if (parseNumber(_value1 select _i) > parseNumber(_value2 select _i)) exitWith {
                 _return = ">";
             };
         };

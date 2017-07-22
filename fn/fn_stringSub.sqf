@@ -25,10 +25,10 @@ params [
     ["_value1","1",[""]],
     ["_value2","1",[""]]
 ];
-_value1 = [_value1] call life_fnc_stringArray;
+_value1 = _value1 splitString "";
 reverse _value1;
 _count1 = count(_value1);
-_value2 = [_value2] call life_fnc_stringArray;
+_value2 = _value2 splitString "";
 reverse _value2;
 _count2 = count(_value2);
 
@@ -37,13 +37,13 @@ _return = [];
 for "_i" from 0 to (if (_count1 >= _count2) then {_count1 - 1} else {_count2 - 1}) step 1 do {
     if (_count1 > _i) then {
         if (_count2 > _i) then {
-            _tmp = (_value1 select _i) - (_value2 select _i) - _tmp;
+            _tmp = parseNumber(_value1 select _i) - parseNumber(_value2 select _i) - _tmp;
         } else {
-            _tmp = (_value1 select _i) - _tmp;
+            _tmp = parseNumber(_value1 select _i) - _tmp;
         };
     } else {
         if (_count2 > _i) then {
-            _tmp = (_value2 select _i) - _tmp;
+            _tmp = parseNumber(_value2 select _i) - _tmp;
         };
     };
 
@@ -51,7 +51,7 @@ for "_i" from 0 to (if (_count1 >= _count2) then {_count1 - 1} else {_count2 - 1
         _return pushBack (_tmp + 10);
         _tmp = 1;
     } else {
-        if (!((_count1 - 1) <= _i && {(_count2 - 1) <= _i} && {_tmp isEqualTo 0} && {((_count1 + _count2) / 2) > 1})) then {
+        if (!((_count1 - 1) isEqualTo _i && {(_count2 - 1) isEqualTo _i} && {_tmp isEqualTo 0} && {((_count1 + _count2) / 2) > 1})) then {
             _return pushBack _tmp;
             _tmp = 0;
         };
@@ -59,8 +59,11 @@ for "_i" from 0 to (if (_count1 >= _count2) then {_count1 - 1} else {_count2 - 1
 };
 
 reverse _return;
-_return = [_return] call life_fnc_stringArray;
-if (parseNumber(_return) isEqualTo 0) then { //Fix for multiple zeros
-    _return = "0";
+//Hack for zeros before number
+for "_i" from 0 to (count(_return) - 2) step 1 do {
+    if (!((_return select 0) isEqualTo 0)) exitWith {};
+    _return deleteAt 0;
 };
+
+_return = _return joinString "";
 _return;

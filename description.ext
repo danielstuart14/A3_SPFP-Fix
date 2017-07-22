@@ -4,7 +4,6 @@ class CfgFunctions {
         class Math {
             file = "fn";
 
-            class stringArray;
             class stringCompare;
             class stringSub;
             class stringSum;
